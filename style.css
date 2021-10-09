@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#app {
+    margin: 50px auto;
+    background: aqua;
+    width: 300px;
+    height: 500px;
+    padding: 30px;
+}
+#res{
+    padding: 10px;
+    margin: 10px;
+}
+h1{
+    text-transform: uppercase;
+}
+.row button {
+    text-align: center;
+    font-weight: bold;
+    width: 40px;
+    font-size: 35px;
+    height: 40px;
+    margin: 5px;
+    float: left;
+}
+
+.row button:focus {
+    outline: none;
+}
+
+.row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
