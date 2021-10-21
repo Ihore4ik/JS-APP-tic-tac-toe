@@ -8,24 +8,55 @@
 <body>
 
 <div id="app">
+<div class="title">
     <h1>Tic Tac Toe</h1>
-    <div class="row">
-        <button data-value="0"></button>
-        <button data-value="1"></button>
-        <button data-value="2"></button>
+    <h3 id="player"></h3>
+    <h3 id="winner"></h3>
+</div>
+<div class="wrapper">
+
+    <div class="table">
+        <div class="row">
+            <button data-value="0"></button>
+            <button data-value="1"></button>
+            <button data-value="2"></button>
+        </div>
+        <div class="row">
+            <button data-value="3"></button>
+            <button data-value="4"></button>
+            <button data-value="5"></button>
+        </div>
+        <div class="row">
+            <button data-value="6"></button>
+            <button data-value="7"></button>
+            <button data-value="8"></button>
+        </div>
+
     </div>
-    <div class="row">
-        <button data-value="3"></button>
-        <button data-value="4"></button>
-        <button data-value="5"></button>
-    </div>
-    <div class="row">
-        <button data-value="6"></button>
-        <button data-value="7"></button>
-        <button data-value="8"></button>
+    <div class="outer"></div>
+</div>
+    <div class="choseOption">
+        <form>
+            <p>Please select your want to play with:</p>
+            <div>
+                <input type="radio" id="opponent1"
+                       name="opponent" value="player"
+                       checked
+                >
+                <label for="opponent1">Another player</label>
+
+                <input type="radio" id="opponent2"
+                       name="opponent" value="ai">
+                <label for="opponent2">SuperComputer</label>
+
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </div>
     <button id="res">RESTART</button>
-    <h1 id="h1"></h1>
+
 </div>
 <script src="scr.js"></script>
 </body>
