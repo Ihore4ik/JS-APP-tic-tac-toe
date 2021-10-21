@@ -26,6 +26,10 @@ displayNextPlayer.textContent = "Start Player - X";
 // buttons[0] === null || buttons[1] === null and so on ...
 function stepAI() {
     if (!isNextY && opponent === "ai") {
+        // when AI is "thinking" user can't push any button
+        buttons.forEach(btn=>{
+            btn.style.pointerEvents='none';
+        });
         setTimeout(() => {
             for (let k = 0; k < resultArray.length; k++) {
                 if (resultArray[k] === null) {
@@ -41,6 +45,10 @@ function stepAI() {
                 }
             }
             isWinner();
+            //when AI "clicked" button, user make step
+            buttons.forEach(btn=>{
+                btn.style.pointerEvents='auto';
+            })
             ///delay for AI step
         }, (Math.floor(Math.random() * (5 - 1) + 1)*1000))
     }
